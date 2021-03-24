@@ -1,0 +1,71 @@
+#displayWeather {
+    visibility: hidden;
+}
+
+.navbar {
+    color: white;
+    font-size: x-large;
+    align-content: center; 
+    justify-content: center;
+    line-height: 50px;
+}
+
+.sidebar-heading {
+    margin: 5px;
+}
+
+#searchBox {
+    float: left;
+}
+
+#main-card {
+    margin: 30px;
+    min-height: 300px;
+    min-width: 500px;
+    display: block;
+    clear: both;
+}
+
+.main-card-body {
+    max-width: max-content;
+    max-height: max-content;
+    margin: 20px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+  }
+
+#temperature, #humidity, #wind-speed, #uv {
+    margin-left: 10px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.wicon {
+margin-left: 50px;
+transform: scale(3);
+}
+
+#uv {
+    background-color: red;
+    color: seashell;
+    border-radius: 10%;
+    padding: 2px;
+}
+
+h2 {
+    margin: 30px;
+}
+
+
+#five-day {
+    display: block;
+}
+
+#forecast {
+    margin: 30px;
+    float: left;
+}
