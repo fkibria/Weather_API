@@ -86,7 +86,7 @@ function searchWeather(city) {
         var lat = response.coord.lat;
         var long = response.coord.lon;
         var iconcode = response.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
         $('.wicon').attr('src', iconurl);
         searchUVindex(lat, long);
         getForecast(city);
@@ -119,7 +119,7 @@ function getForecast(city) {
             var icon = { weather };
             var iconcode = icon.weather[0].icon
             console.log(icon.weather[0].icon);
-            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
             myHtml += `
                 <div class="card text-white bg-primary mb-3" id= "forecast" style="max-width: 170px;">
                     <div class="card-body" style="max-width: 160px; max-height: 400px;">
@@ -149,12 +149,13 @@ $("#searchBtn").on("click", function () {
 
 function searchUVindex(lat, long) {
     var apiKey = "538062e71ac8baa0d64287e376d8516e"
-    var UVQueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + apiKey
+    var UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=" + apiKey
     $.ajax({
         type: "GET",
         url: UVQueryURL
     }).then(function (response) {
         var UVIndex = response.value;
+        console.log(UVIndex);
         $("#uv").html(UVIndex);
     })
 }
