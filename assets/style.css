@@ -18,10 +18,14 @@
     float: left;
 }
 
+#searchBtn {
+    margin-left: 3px;
+}
+
 #main-card {
     margin: 30px;
     min-height: 300px;
-    min-width: 500px;
+    min-width: 300px;
     display: block;
     clear: both;
 }
@@ -37,7 +41,7 @@
   }
 
 #temperature, #humidity, #wind-speed, #uv {
-    margin-left: 10px;
+    width: max-content;
 }
 
 .row {
@@ -54,6 +58,7 @@ transform: scale(3);
     color: seashell;
     border-radius: 10%;
     padding: 2px;
+    margin-left: 10px;
 }
 
 h2 {
@@ -63,9 +68,10 @@ h2 {
 
 #five-day {
     display: block;
+    margin: 30px;
 }
 
 #forecast {
-    margin: 30px;
+    margin: 10px;
     float: left;
 }
